@@ -1,0 +1,83 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+html{
+  font-size: 1.5vw;
+}
+header{
+  background-color: yellow;
+  padding: 0 2rem;
+}
+body{
+  background-color: black;
+}
+section{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5rem 8rem;
+  height: 80vh;
+  border-bottom: 1px solid grey; 
+}
+.content-out{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.section1{
+  /* background-color: cadetblue; */
+  height: 90vh;
+}
+.section1 .content-out{
+  margin-top: 20rem;
+  opacity: 0;
+}
+/* .section2{
+  background-color: beige;
+}
+.section3{
+  background-color: burlywood;
+}
+.section4{
+  background-color: chocolate;
+} */
+section .content{
+  width: 30%;
+}
+h3{
+  color: greenyellow;
+  font-size: 5rem;
+}
+.ball{
+  width: 5rem;
+  height: 5rem;
+  position: fixed;
+  background-color: white;
+  border-radius: 100%;
+  left: 47%;
+  top: 47%;
+  z-index: 5;
+}
+.line{
+  height: 7rem;
+  width: 0.15rem;
+  position: fixed;
+  background-color: white;
+  left: 50.7%;
+  top: 35%;
+}
+
+@keyframes bounceAnimation {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5rem); /* Adjust bounce height */
+  }
+}
+
+.ball {
+  animation: none; /* Start with no animation */
+}
