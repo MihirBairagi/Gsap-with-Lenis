@@ -10,7 +10,7 @@ function App() {
   useEffect(() => {
     // Initialize Lenis for smooth scrolling
     const lenis = new Lenis({
-      duration: 2.5,
+      duration: 2,
       smooth: true,
     });
 
@@ -58,7 +58,6 @@ function App() {
         onLeaveBack: () => {
           document.querySelector(".ball").style.backgroundColor = "white";
         },
-        y: '1rem',
       }
     });
 
@@ -126,7 +125,7 @@ function App() {
           document.querySelector(".line").style.display = "none";
         },
         onLeaveBack: () => {
-          document.querySelector(".ball").style.animation = "none";
+          document.querySelector(".ball").style.animation = "upDown 5s infinite";
           document.querySelector(".line").style.display = "block";
         },
         scrub: true,
@@ -139,7 +138,7 @@ function App() {
 
   return (
     <div >
-      <div className="ball "></div>
+      <div className="ball up-down"></div>
       <div className="line"></div>
       <header>
         <h2>Nav Bar</h2>

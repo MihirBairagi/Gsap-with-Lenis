@@ -18,7 +18,7 @@ section{
   align-items: center;
   padding: 5rem 8rem;
   height: 80vh;
-  border-bottom: 1px solid grey; 
+  /* border-bottom: 1px solid grey;  */
 }
 .content-out{
   display: flex;
@@ -57,17 +57,40 @@ h3{
   background-color: white;
   border-radius: 100%;
   left: 47%;
-  top: 47%;
+  top: 48vh;
   z-index: 5;
 }
 .line{
-  height: 7rem;
+  height: 52vh;
   width: 0.15rem;
   position: fixed;
   background-color: white;
   left: 50.7%;
-  top: 35%;
+  top: -2%;
+  animation: upDown 5s infinite;
 }
+
+.ball.up-down {
+  animation: upDown 5s infinite;
+}
+@keyframes upDown {
+  0% {
+    transform: translateX(0) ;
+  }
+  25% {
+    transform: translateX(0.5rem) ;/* Move diagonally up-right */
+  }
+  50% {
+    transform: translateX(0); /* Return to start */
+  }
+  75% {
+    transform: translateX(-0.5rem); /* Move diagonally down-left */
+  }
+  100% {
+    transform: translateX(0); /* Return to start */
+  }
+}
+
 
 @keyframes bounceAnimation {
   0%, 100% {
